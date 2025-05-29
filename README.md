@@ -23,40 +23,46 @@ The model helps answer a binary question: **Does the patient show signs of heart
 
 ## Results Summary
 
-> _Model used_: Logistic Regression, Random Forest, KNN  
-> _Evaluation Metrics_:
-- **Accuracy**: ~85-90%
-- **Precision**: High, especially in Random Forest & XGBoost
-- **Recall**: Balanced performance, avoids false negatives
+**_Model used_:** Logistic Regression, Random Forest, KNN  <br><br>
+<img src="https://github.com/Rohanc0412/Heart-Disease-Classification/blob/56acb58d5c204474888a386687819b32e2090a52/assets/Screenshot%202025-05-29%20172452.png" alt="Heart Disease Prediction" width="800"/>
 
-> _Visualizations_:
-- Heatmap of feature correlation
-- Feature importance plots
-- ROC curve
-- Confusion matrix
+
+**_Visualizations Performed_**:
+- Heatmap of feature correlation :<br><br>
+  <img src="https://github.com/Rohanc0412/Heart-Disease-Classification/blob/2e97a711260dad51081e17edaaeff9c61fdb6203/assets/Screenshot%202025-05-29%20173003.png" alt="Heart Disease Prediction" width="500"/>
+
+- Feature importance plot of Random forest Classifier: <br><br>
+  <img src="https://github.com/Rohanc0412/Heart-Disease-Classification/blob/e514062422db15822fb87d94dd77c35a3c3632c8/assets/Screenshot%202025-05-29%20174433.png" alt="Heart Disease Prediction" width="500"/>
+  
+- ROC curve of Random forest classifier:<br><br>
+  <img src="https://github.com/Rohanc0412/Heart-Disease-Classification/blob/e514062422db15822fb87d94dd77c35a3c3632c8/assets/Screenshot%202025-05-29%20174405.png" alt="Heart Disease Prediction" width="500"/>
+  
+- Confusion matrix of Random forest classifier:<br><br>
+  <img src="https://github.com/Rohanc0412/Heart-Disease-Classification/blob/e514062422db15822fb87d94dd77c35a3c3632c8/assets/Screenshot%202025-05-29%20174421.png" alt="Heart Disease Prediction" width="500"/>
+
+> _Other visualizations were also performed during EDA_
 
 ---
 
 ## Dataset Description
 
-- **Source**: UCI Machine Learning Repository
+- **Source**: [Heart Disease Classification Dataset](https://www.kaggle.com/datasets/sumaiyatasmeem/heart-disease-classification-dataset)
 - **Records**: ~300
-- **Features**:
-  - Numerical: `age`, `trestbps`, `chol`, `thalach`, `oldpeak`
-  - Categorical: `sex`, `cp`, `fbs`, `restecg`, `exang`, `slope`, `ca`, `thal`
+- **Features**: `age`, `trestbps`, `chol`, `thalach`, `oldpeak``sex`, `cp`, `fbs`, `restecg`, `exang`, `slope`, `ca`, `thal`
 - **Target**: `target` → 1 = Disease Present, 0 = No Disease
 
 ---
 
 ## Technologies Used
 
-- **Language**: Python 3.x
+- **Language**: Python
 - **IDE**: Jupyter Notebook
 - **Libraries**:
   - Data Manipulation: `pandas`, `numpy`
   - Visualization: `matplotlib`, `seaborn`, `plotly`
-  - Modeling: `scikit-learn`, `xgboost`, `lightgbm`
-  - Evaluation: `classification_report`, `confusion_matrix`, `roc_auc_score`
+  - Modeling: `LogisticRegression`, `KNeighborsClassifier`, `RandomForestClassifier`
+  - Hyper-parameter Tuning: `RandomizedSearchCV`,  `GridSearchCV`
+  - Evaluation: `classification_report`, `confusion_matrix`, `roc_auc_score`, `f1_score`, `recall_score`, `precision_score`, `RocCurveDisplay` 
 
 ---
 
@@ -80,11 +86,7 @@ The model helps answer a binary question: **Does the patient show signs of heart
 git clone https://github.com/yourusername/heart-disease-prediction.git
 cd heart-disease-prediction
 ```
-2. **Install dependencies**
-```bash
-pip install -r requirements.txt
-```
-3. **Launch the notebook**
+2. **Launch the notebook**
 ```bash
 jupyter notebook Prediction_Of_Heart_Disease.ipynb
 ```
