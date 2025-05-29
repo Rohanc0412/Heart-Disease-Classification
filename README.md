@@ -23,12 +23,11 @@ The model helps answer a binary question: **Does the patient show signs of heart
 
 ## Results Summary
 
-> _Model used_: Logistic Regression, Random Forest, XGBoost (assumed from standard practice)  
+> _Model used_: Logistic Regression, Random Forest, KNN  
 > _Evaluation Metrics_:
 - **Accuracy**: ~85-90%
 - **Precision**: High, especially in Random Forest & XGBoost
 - **Recall**: Balanced performance, avoids false negatives
-- **Top Features**: `cp` (chest pain type), `thalach` (max heart rate), `oldpeak`, `ca`, `thal`
 
 > _Visualizations_:
 - Heatmap of feature correlation
